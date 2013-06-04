@@ -1,0 +1,121 @@
+/* line 5, ../sass/breakpoints.sass */
+.breakpoint {
+  background: yellow;
+  height: 34px;
+  padding: 0 68px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 20;
+}
+/* line 14, ../sass/breakpoints.sass */
+.breakpoint > * {
+  float: left;
+}
+/* line 17, ../sass/breakpoints.sass */
+.breakpoint .height {
+  margin: 0 68px 0 34px;
+}
+
+@media only screen and (max-width: 1020px) {
+  /* line 26, ../sass/breakpoints.sass */
+  section[id="home"] h1 {
+    font-size: 51px !important;
+    line-height: 68px !important;
+  }
+  /* line 31, ../sass/breakpoints.sass */
+  section[id="about"] .photo {
+    min-height: 375px !important;
+    min-width: 375px !important;
+  }
+}
+@media only screen and (max-width: 800px) {
+  /* line 41, ../sass/breakpoints.sass */
+  section[id="home"] h1 {
+    font-size: 42.5px !important;
+    line-height: 59.5px !important;
+  }
+}
+@media only screen and (max-width: 680px) {
+  /* line 55, ../sass/breakpoints.sass */
+  nav .wrapper {
+    padding-right: 17px !important;
+  }
+  /* line 58, ../sass/breakpoints.sass */
+  nav #logo {
+    padding-left: 34px !important;
+  }
+
+  /* line 61, ../sass/breakpoints.sass */
+  section {
+    padding: 68px 34px !important;
+  }
+  /* line 64, ../sass/breakpoints.sass */
+  section .cols {
+    column-span: all !important;
+    -webkit-column-span: all !important;
+    columns: 1 !important;
+    -webkit-columns: 1 !important;
+  }
+  /* line 73, ../sass/breakpoints.sass */
+  section[id="home"] h1 {
+    font-size: 34px !important;
+    line-height: 51px !important;
+  }
+  /* line 79, ../sass/breakpoints.sass */
+  section[id="shop"] header h2 {
+    font-size: 28px;
+  }
+  /* line 82, ../sass/breakpoints.sass */
+  section[id="shop"] header h5 {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  /* line 94, ../sass/breakpoints.sass */
+  section[id="home"] h1 {
+    font-size: 29.05983px !important;
+    line-height: 45.56px !important;
+  }
+  /* line 99, ../sass/breakpoints.sass */
+  section[id="shop"] header {
+    height: 34px !important;
+    line-height: 17px;
+  }
+  /* line 103, ../sass/breakpoints.sass */
+  section[id="shop"] header h2 {
+    font-size: 24px !important;
+  }
+  /* line 106, ../sass/breakpoints.sass */
+  section[id="shop"] header h5 {
+    margin-bottom: none !important;
+  }
+  /* line 109, ../sass/breakpoints.sass */
+  section[id="shop"] header .currency {
+    font-size: 17px !important;
+    vertical-align: 17px !important;
+  }
+  /* line 113, ../sass/breakpoints.sass */
+  section[id="shop"] header .amount {
+    font-size: 45.56px !important;
+  }
+}
+@media only screen and (max-width: 460px) {
+  /* line 122, ../sass/breakpoints.sass */
+  section[id="home"] h1 {
+    font-size: 25.37313px !important;
+    line-height: 45.56px !important;
+  }
+  /* line 127, ../sass/breakpoints.sass */
+  section[id="about"] .photo {
+    min-height: 375px !important;
+    min-width: 375px !important;
+  }
+}
+@media only screen and (max-width: 442px) {
+  /* line 136, ../sass/breakpoints.sass */
+  nav #logo {
+    padding-left: 17px !important;
+    width: 100px !important;
+  }
+}

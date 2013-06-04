@@ -1,0 +1,14 @@
+
+*.scssc
+
+.DS_Store
+
+*.sassc
+
+js/fittext.js
+
+js/baseline.js
+
+sass/partials/_flipInX.scss
+
+sass/partials/_gridpak.scss

@@ -1,0 +1,138 @@
+$grid: 34px
+$brand: #0066AE
+
+ 
+.breakpoint 
+	background: yellow
+	height: $grid
+	padding: 0 $grid*2
+	position: fixed
+	bottom: 0
+	width: 100%
+	z-index: 20
+
+	> *
+		float: left
+
+	.height 
+		margin: 0 $grid*2 0 $grid
+
+
+
+@media only screen and (max-width: 1020px)
+
+	section
+		&[id="home"]
+			h1 
+				font-size: $grid*1.5 !important
+				line-height: $grid*2 !important
+
+		&[id="about"]
+			.photo
+				//background-size: 100% !important
+				min-height: 375px !important
+				min-width: 375px !important
+
+
+@media only screen and (max-width: 800px)
+
+	section
+		&[id="home"]
+			h1
+				font-size: $grid*1.25 !important
+				line-height: $grid*1.75 !important
+
+		&[id="shop"]
+
+		&[id="about"]
+			[id="team"]
+
+
+
+@media only screen and (max-width: 680px)
+
+	nav
+		.wrapper
+			padding-right: $grid/2 !important
+
+		#logo
+			padding-left: $grid !important
+
+	section
+		padding: $grid*2 $grid !important
+
+		.cols
+			column-span: all !important
+			//-moz-column-span: all
+			-webkit-column-span: all !important
+			columns: 1 !important
+			//-moz-columns: 1
+			-webkit-columns: 1 !important
+
+		&[id="home"]
+			h1
+				font-size: $grid !important
+				line-height: $grid*1.5 !important
+				
+		&[id="shop"]
+			header
+				h2
+					font-size: 28px
+
+				h5
+					font-size: 13px	
+
+		&[id="about"]
+
+
+
+@media only screen and (max-width: 500px)
+
+	section
+
+		&[id="home"]
+			h1
+				font-size: $grid/1.17 !important
+				line-height: $grid*1.34 !important
+
+		&[id="shop"]
+			header
+				height: $grid !important
+				line-height: $grid/2
+
+				h2 
+					font-size: 24px !important
+
+				h5
+					margin-bottom: none !important
+
+				.currency
+					font-size: $grid/2 !important
+					vertical-align: $grid/2 !important
+
+				.amount
+					font-size: $grid*1.34 !important
+
+
+
+@media only screen and (max-width: 460px)
+
+	section
+		&[id="home"]
+			h1
+				font-size: $grid/1.34 !important
+				line-height: $grid*1.34 !important
+
+		&[id="about"]
+			.photo
+				min-height: 375px !important
+				min-width: 375px !important
+
+
+@media only screen and (max-width: 442px)
+
+	nav
+
+		#logo
+			padding-left: $grid/2 !important
+			width: 100px !important

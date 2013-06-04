@@ -1,0 +1,104 @@
+// Prefixes
+$webkit:true;
+$o:true;
+$moz:true;
+$w3:true;
+$ms:true;
+
+// Gradients
+@mixin gradient($mode,$direction,$from,$to,$oldDirection:null){
+
+    @if $webkit == true {
+        @if($oldDirection != null){
+            background-image: -webkit-gradient($mode, #{$oldDirection}, from($from),to($to));
+        }
+        background-image: -webkit-#{$mode}-gradient($direction, $from, $to);
+    }
+    @if $moz == true {
+        background-image: -moz-#{$mode}-gradient($direction, $from, $to);
+    }
+    @if $o == true {
+        background-image: -o-#{$mode}-gradient($direction, $from, $to);
+    }
+    @if $ms == true {
+        background-image: -ms-#{$mode}-gradient($direction, $from, $to);
+    }
+    @if $w3 == true {
+        background-image: #{$mode}-gradient($direction, $from, $to);
+    }
+}
+
+// @2x
+$image-path: "../img";
+
+@mixin retina($image-name, $image-extension: "png", $top: top, $left: left, $repeat: no-repeat, $color: rgba(255,255,255,0)) {
+  background: url("#{$image-path}/#{$image-name}.#{$image-extension}") $top $left $repeat $color;
+  @media (-moz-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+    background: url("#{$image-path}/#{$image-name}@2x.#{$image-extension}") $top $left $repeat $color;
+    background-size: 18%;
+  }
+}
+
+// Transitions
+@mixin transition($property, $time, $method) {
+	-webkit-transition: $property $time $method;
+	-moz-transition: $property $time $method;
+	-ms-transition: $property $time $method;
+	-o-transition: $property $time $method;
+	transition: $property $time $method;
+}
+
+// Animations
+@mixin animation($name, $length:1000ms, $ease:ease, $delay:0ms, $iteration:1, $alternate:normal, $fillmode:both, $backface:hidden) {
+	-webkit-animation-name: $name;
+	-webkit-animation-duration:$length;
+	-webkit-animation-iteration-count: $iteration;
+	-webkit-animation-timing-function: $ease;
+	-webkit-animation-delay: $delay;
+	-webkit-animation-direction: $alternate;
+	-webkit-animation-fill-mode: $fillmode;
+	-webkit-backface-visibility: $backface;
+
+	-moz-animation-name: $name;
+	-moz-animation-duration:$length;
+	-moz-animation-iteration-count: $iteration;
+	-moz-animation-timing-function: $ease;
+	-moz-animation-delay: $delay;
+	-moz-animation-direction: $alternate;
+	-moz-animation-fill-mode: $fillmode;
+
+	-ms-animation-name: $name;
+	-ms-animation-duration:$length;
+	-ms-animation-iteration-count: $iteration;
+	-ms-animation-timing-function: $ease;
+	-ms-animation-delay: $delay;
+	-ms-animation-direction: $alternate;
+	-ms-animation-fill-mode: $fillmode;
+	-ms-backface-visibility: $backface;
+
+	-o-animation-name: $name;
+	-o-animation-duration:$length;
+	-o-animation-iteration-count: $iteration;
+	-o-animation-timing-function: $ease;
+	-o-animation-delay: $delay;
+	-o-animation-direction: $alternate;
+	-o-animation-fill-mode: $fillmode;
+	-o-backface-visibility: $backface;
+
+	animation-name: $name;
+	animation-duration:$length;
+	animation-iteration-count: $iteration;
+	animation-timing-function: $ease;
+	animation-delay: $delay;
+	animation-direction: $alternate;
+	animation-fill-mode: $fillmode;
+	backface-visibility: $backface;
+
+	// enables hardware acceleration
+	-webkit-transform: translateZ(0);
+	-moz-animation: translateZ(0);
+	-ms-animation: translateZ(0);
+	-o-animation: translateZ(0);
+	animation: translateZ(0);
+
+}

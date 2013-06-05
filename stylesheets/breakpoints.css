@@ -23,14 +23,9 @@
     font-size: 51px !important;
     line-height: 68px !important;
   }
-  /* line 31, ../sass/breakpoints.sass */
-  section[id="about"] .photo {
-    min-height: 375px !important;
-    min-width: 375px !important;
-  }
 }
 @media only screen and (max-width: 800px) {
-  /* line 41, ../sass/breakpoints.sass */
+  /* line 45, ../sass/breakpoints.sass */
   section[id="home"] h1 {
     font-size: 42.5px !important;
     line-height: 59.5px !important;
@@ -72,50 +67,52 @@
   }
 }
 @media only screen and (max-width: 500px) {
-  /* line 94, ../sass/breakpoints.sass */
+  /* line 91, ../sass/breakpoints.sass */
   section[id="home"] h1 {
     font-size: 29.05983px !important;
     line-height: 45.56px !important;
   }
-  /* line 99, ../sass/breakpoints.sass */
+  /* line 96, ../sass/breakpoints.sass */
   section[id="shop"] header {
     height: 34px !important;
     line-height: 17px;
   }
-  /* line 103, ../sass/breakpoints.sass */
+  /* line 100, ../sass/breakpoints.sass */
   section[id="shop"] header h2 {
     font-size: 24px !important;
   }
-  /* line 106, ../sass/breakpoints.sass */
+  /* line 103, ../sass/breakpoints.sass */
   section[id="shop"] header h5 {
     margin-bottom: none !important;
   }
-  /* line 109, ../sass/breakpoints.sass */
+  /* line 106, ../sass/breakpoints.sass */
   section[id="shop"] header .currency {
     font-size: 17px !important;
     vertical-align: 17px !important;
   }
-  /* line 113, ../sass/breakpoints.sass */
+  /* line 110, ../sass/breakpoints.sass */
   section[id="shop"] header .amount {
     font-size: 45.56px !important;
   }
 }
 @media only screen and (max-width: 460px) {
-  /* line 122, ../sass/breakpoints.sass */
+  /* line 119, ../sass/breakpoints.sass */
   section[id="home"] h1 {
     font-size: 25.37313px !important;
     line-height: 45.56px !important;
   }
-  /* line 127, ../sass/breakpoints.sass */
-  section[id="about"] .photo {
-    min-height: 375px !important;
-    min-width: 375px !important;
-  }
 }
 @media only screen and (max-width: 442px) {
-  /* line 136, ../sass/breakpoints.sass */
+  /* line 131, ../sass/breakpoints.sass */
   nav #logo {
     padding-left: 17px !important;
     width: 100px !important;
+  }
+
+  /* line 137, ../sass/breakpoints.sass */
+  section[id="about"] .photo {
+    float: none !important;
+    height: 300px !important;
+    width: 300px !important;
   }
 }

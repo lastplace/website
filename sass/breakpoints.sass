@@ -27,11 +27,15 @@ $brand: #0066AE
 				font-size: $grid*1.5 !important
 				line-height: $grid*2 !important
 
+@media only screen and (max-width: 950px)
+	section	
 		&[id="about"]
-			.photo
-				//background-size: 100% !important
-				min-height: 375px !important
-				min-width: 375px !important
+
+
+@media only screen and (max-width: 900px)
+	section	
+		&[id="about"]
+
 
 
 @media only screen and (max-width: 800px)
@@ -42,12 +46,8 @@ $brand: #0066AE
 				font-size: $grid*1.25 !important
 				line-height: $grid*1.75 !important
 
-		&[id="shop"]
-
 		&[id="about"]
-			[id="team"]
-
-
+			
 
 @media only screen and (max-width: 680px)
 
@@ -81,9 +81,6 @@ $brand: #0066AE
 
 				h5
 					font-size: 13px	
-
-		&[id="about"]
-
 
 
 @media only screen and (max-width: 500px)
@@ -124,9 +121,7 @@ $brand: #0066AE
 				line-height: $grid*1.34 !important
 
 		&[id="about"]
-			.photo
-				min-height: 375px !important
-				min-width: 375px !important
+			
 
 
 @media only screen and (max-width: 442px)
@@ -136,3 +131,10 @@ $brand: #0066AE
 		#logo
 			padding-left: $grid/2 !important
 			width: 100px !important
+
+	section
+		&[id="about"]
+			.photo
+				float: none !important
+				height: 300px !important
+				width: 300px !important

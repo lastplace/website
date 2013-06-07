@@ -46,8 +46,12 @@ $brand: #0066AE
 				font-size: $grid*1.25 !important
 				line-height: $grid*1.75 !important
 
-		&[id="about"]
-			
+		&[id="team"]
+			.right 
+				display: none !important
+			.left
+				width: 100% !important 
+
 
 @media only screen and (max-width: 680px)
 
@@ -76,11 +80,22 @@ $brand: #0066AE
 				
 		&[id="shop"]
 			header
-				h2
-					font-size: 28px
+				height: $grid !important
+				line-height: $grid/2
+
+				h2 
+					font-size: 24px !important
 
 				h5
-					font-size: 13px	
+					font-size: 14px !important
+					margin-bottom: none !important
+
+				.currency
+					font-size: $grid/2 !important
+					vertical-align: $grid/2 !important
+
+				.amount
+					font-size: $grid*1.34 !important
 
 
 @media only screen and (max-width: 500px)
@@ -92,25 +107,6 @@ $brand: #0066AE
 				font-size: $grid/1.17 !important
 				line-height: $grid*1.34 !important
 
-		&[id="shop"]
-			header
-				height: $grid !important
-				line-height: $grid/2
-
-				h2 
-					font-size: 24px !important
-
-				h5
-					margin-bottom: none !important
-
-				.currency
-					font-size: $grid/2 !important
-					vertical-align: $grid/2 !important
-
-				.amount
-					font-size: $grid*1.34 !important
-
-
 
 @media only screen and (max-width: 460px)
 
@@ -120,7 +116,18 @@ $brand: #0066AE
 				font-size: $grid/1.34 !important
 				line-height: $grid*1.34 !important
 
-		&[id="about"]
+		&[id="shop"]
+			header
+				height: $grid !important
+				line-height: $grid/2
+
+				h2 
+					font-size: 17px !important
+					font-weight: 500
+
+				h5
+					font-size: 11px !important
+					margin-bottom: none !important
 			
 
 

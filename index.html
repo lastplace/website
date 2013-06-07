@@ -10,6 +10,63 @@
 
 	<link rel="stylesheet" href="stylesheets/style.css">
 
+	<script src="js/jquery.js"></script>
+	<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+	<script src="js/browser-os_selectors.js"></script>
+	<script src="js/backstretch.js"></script>
+	<script src="js/waypoints.js"></script>
+	<script src="js/waypoints-sticky.js"></script>
+	<script src="js/gomap.js"></script>
+	<script src="js/imageLens.js"></script>
+	
+	<script>
+		$(function() {
+			// Waypoint Sticky
+			$('nav').waypoint('sticky');
+
+			// Backstretch.js
+			$.backstretch([
+				"../img/bg_boardwall2.jpg",
+				"../img/bg_shop.jpg"
+				], {
+					fade: 950,
+					duration: 4000
+			});
+
+	    $("#map").goMap({ 
+	        icon: 'img/map_pin_medium.png',
+	        maptype: 'ROADMAP',
+	        markers: [{
+	        	latitude: 45.512482, 
+	        	longitude: -122.645702
+	        }],
+	        navigationControl: true, 
+	        navigationControlOptions: { 
+	            style: 'ANDROID' 
+	        }, 
+	        scalecontrol: true,
+	        scrollwheel: false,
+	        zoom: 13
+	    }); 
+
+			// $("#shop img").imageLens({ lensSize: 300,  borderSize: 8,  borderColor: "#0066AE" });
+		});
+
+		// Responsive debug
+		$(window).resize(function(e) {
+
+			 showViewportSize();
+
+			 function showViewportSize() {
+				 var the_width = $(window).width();
+				 var the_height = $(window).height();                   
+				 $('#width').text(the_width);
+				 $('#height').text(the_height);
+			}
+
+		});
+	</script>
+
 </head>
 <body>
 	<nav>
@@ -72,172 +129,172 @@
 100% Cotton</h5>
 				</div>
 			</header>
-			<a href="#" class="photo">
-				<div class="overlay"> 
-					<i class="cart">&#59197;</i>
-					<p>Add to Cart</p>
-				</div>
-				<img src="img/products/pdx_shreds_001-cropped.jpg" width="100%">
-			</a>
+			<div class="photo">
+				<a href="#">
+					<div class="overlay"> 
+						<span>
+							<i class="cart">&#59197;</i>
+							<p>Add to Cart</p>
+						</span>
+					</div>
+					<img src="img/products/pdx_shreds_001-cropped.jpg" width="100%" height="100%">
+				</a>
+			</div>
 		</section>
+
 		<section id="about">
 			<div id="story" class="cols">
 				<h5>The Story</h5>
 				<p class="breakout">Designer-owned and operated with a shoestring budget and a compulsive need to make stuff, we're turning Last Place into the funnest place to skate and shop for everything you destroy in the process.</p>
 
-				<p>In the spring of 2012, sneaker designer <strong>Matt Collins</strong> packed up all of his studio equipment and tools into a moving truck and drove cross country with his dog <a href="#">Rover</a> to settle in the skateboard and bike mecca of <strong>Portland, Oregon</strong>. After a summer of lazy freelance-living, preparations began to turn Last Place into a sneaker shop with a few small skatepark features taking up whatever parking lot space we had available.</p>
+				<p>In the spring of 2012, sneaker designer <strong>Matt Collins</strong> packed up all of his studio equipment and tools into a moving truck and drove cross country with his dog <a href="#">Rover</a> to settle in the skateboard and bike mecca of <strong>Portland, Oregon</strong>. 
 
-				<p>During the early planning stages, a completely serendipitous serious of meetings led us to <a href="http://www.commonwealthskateboarding.com" target="_blank">Commonwealth Skatepark</a> as the perfect new home for our store.</p>
+				<p>After a summer of lazy freelance-living, preparations began to make Last Place into a sneaker shop with a few small skatepark features taking up whatever parking lot space we had available. During the early planning stages, a completely serendipitous serious of meetings led us to <a href="http://www.commonwealthskateboarding.com" target="_blank">Commonwealth Skatepark</a> as the perfect new home for our store.</p>
 
 				<p>With the help of <a href="#team">a team of designers, nerds and tinkerers,</a> we pooled our collective resources to build up some initial inventory and remodel the storefront. <strong>We're also putting our design studio chops to good use</strong>, screen printing high-quality American Apparel Tees, hoodies and decks featuring our own graphics.</p> 
 
 				<p>Come by and skate with us, we appreciate your support! </p>
 			</div>
-			<div id="team">
-				<h5>The People</h5>
-					<div class="bio" id="matt">
-						<div class="right">
-							<div class="photo"> &nbsp; </div>
-						</div>
-						<div class="left">
-							<strong class="name">Matt Collins</strong>
-							<span class="role">Founder, CEO &amp; President</span>
-							<p class="description">Matt serves as the president, head buyer, and chief mischief-maker of Last Place &amp; Commonwealth Skatepark. After studying graphic design at the Art Institute of Boston, he spent ten years designing and developing performance and lifestyle footwear for brands like Reebok, Tommy Hilfiger, Airwalk and New Balance. Matt hates driving more than anything else in the world and prefers to spend every day on his bike and skateboard.
+		</section>
 
-							<!-- <p class="social">
-								<i class="social">
-									<a href="http://www.dribbble.com/mattkicks" target="_blank" title="Dribbble">&#62235;</a>
-								</i>
-								<i class="social">
-									<a href="http://lastplacefootwear.tumblr.com" target="_blank" title="Tumblr">&#62229;</a>
-								</i>
-							</p> -->
-						</div>
-					</div>
-					<div class="bio" id="lance">
-						<div class="right">
-							<div class="photo"> &nbsp; </div>
-						</div>
-						<div class="left">
-							<strong class="name">Lance Normine</strong>
-							<span class="role">Instructor &amp; Co-Founder of Commonwealth Skateboarding</span>
-							<p class="description">Lance is a longtime Portland skater with extensive knowledge of the local and national skateboard scenes as well as the current skateboard product market. Lance is also the primary instructor for Commonwealth’s widely popular skatecamp programs and provides private skateboarding instruction for people of all ages.</p>
-						</div>
-					</div>
-					
-					<div class="bio" id="jen">
-						<div class="right">
-							<div class="photo"> &nbsp; </div>
-						</div>
-						<div class="left">
-							<strong class="name">Jen Sherowski</strong>
-							<span class="role">Public Relations &amp; Co-Founder of Commonwealth Skateboarding</span>
-							<p class="description">Bio here.</p>
-						</div>
-					</div>
+		<section id="contact">
+			<div class="row">
+				<h5>Get in Touch</h5>
+				<p>
+					1425 SE 20th Avenue, Portland OR, 97214 <br>
+					503-208-2080 <br>
+					<a href="mailto:info@lastplacefootwear.com">info@lastplacefootwear.com</a>
+				</p>
+			</div>
+			<div class="row">
+				<h6>Hours</h6>
+				<table width="100%" cellpadding="0" cellspacing="0" class="hours">
+					<tr>
+						<th>Monday</th>
+						<th>Tuesday - Thursday</th>
+						<th>Friday</th>
+						<th>Saturday</th>
+						<th>Sunday</th>
+					</tr>
+					<tr>
+						<td>2pm - 10pm</td>
+						<td>2pm - 8pm</td>
+						<td>2pm - 9pm</td>
+						<td>10am - 8pm</td>
+						<td>12pm - 7:30pm</td>
+					</tr>
+				</table>
+			</div>
+			<div class="row">
+				<h6>Map</h6>
+				<p>The shop is accessible via Trimet route 14 and street parking is available on surrounding streets.</p>
+				<div id="map">&nbsp;</div>
+			</div>
+		</section>
 
-					<div class="bio" id="mandy">
-						<div class="right">
-							<div class="photo"> &nbsp; </div>
-						</div>
-						<div class="left">
-							<strong class="name">Mandy McClausky</strong>
-							<span class="role">Digital Strategist, Designer</span>
-							<p class="description">Mandy is another regular face around the shop, helping run the retail space and maintaining our social presence. She has over a decade of experience in web design and front-end development and has been the primary designer for LastPlaceFootwear.com.</p>
-						</div>
+		<section id="team">
+			<h5>The People</h5>
+				<div class="bio" id="matt">
+					<div class="right">
+						<div class="photo"> &nbsp; </div>
 					</div>
+					<div class="left">
+						<strong class="name">Matt Collins</strong>
+						<span class="role">Founder, CEO &amp; President</span>
+						<p class="description">Matt serves as the president, head buyer, and chief mischief-maker of Last Place &amp; Commonwealth Skatepark. After studying graphic design at the Art Institute of Boston, he spent ten years designing and developing performance and lifestyle footwear for brands like Reebok, Tommy Hilfiger, Airwalk and New Balance. Matt hates driving more than anything else in the world and prefers to spend every day on his bike and skateboard.
 
-					<div class="bio" id="colin">
-						<div class="right">
-							<div class="photo"> &nbsp; </div>
-						</div>
-						<div class="left">
-							<strong class="name">Colin Delargy</strong>
-							<span class="role">Chief Financial Officer</span>
-							<p class="description">Colin is an engineer, entrepreneur, tinkerer and investor with extensive knowledge of online commerce and payments. Colin currently serves as our Chief Financial Officer and has extensive experience working with seed through IPO stage technology ventures and commercial, non-profit and government finance and accounting.</p>
-						</div>
-					</div>
-
-					<div class="bio" id="nat">
-						<div class="right">
-							<div class="photo"> &nbsp; </div>
-						</div>
-						<div class="left">
-							<strong class="name">Nat Tarbox</strong>
-							<span class="role">Vice President</span>
-							<p class="description">Nat is a seasoned user experience design leader with a background in web media and software products. As an early stage hire at an SaaS startup which recently completed a successful IPO, he contributed to the design and growth of both product design and customer solutions teams. His areas of product design concentration include mobile apps, social interaction, commerce, and video.</p>
-						</div>
-					</div>
-					<div class="bio" id="branden">
-						<div class="right">
-							<div class="photo"> &nbsp; </div>
-						</div>
-						<div class="left">
-							<strong class="name">Branden Hall</strong>
-							<p class="description">Branden is the CEO and co-founder of Automata Studios, a software consultancy and development studio based out of Washington, DC. Over the last seven years Branden and his partners have grown Automata from a bootstrapped garage start-up to an organization with 8 full time employees, numer- ous contractors, and a client list that includes such companies as IBM, Chanel, NPR, Microsoft, and Adobe.</p>
-						</div>
-					</div>
-					<div class="bio" id="franco">
-						<div class="right">
-							<div class="photo"> &nbsp; </div>
-						</div>
-						<div class="left">
-							<strong class="name">Franco Brockelman</strong>
-							<p class="description">Franco bio</p>
-						</div>
-					</div>
-					<div class="bio" id="bryce">
-						<div class="right">
-							<div class="photo"> &nbsp; </div>
-						</div>
-						<div class="left">
-							<strong class="name">Bryce Holley</strong>
-							<p class="description">Bryce bio.</p>
-						</div>
+						<!-- <p class="social">
+							<i class="social">
+								<a href="http://www.dribbble.com/mattkicks" target="_blank" title="Dribbble">&#62235;</a>
+							</i>
+							<i class="social">
+								<a href="http://lastplacefootwear.tumblr.com" target="_blank" title="Tumblr">&#62229;</a>
+							</i>
+						</p> -->
 					</div>
 				</div>
-		</section>
-		<section id="contact">
-			<h5>Get in Touch</h5>
+				<div class="bio" id="lance">
+					<div class="right">
+						<div class="photo"> &nbsp; </div>
+					</div>
+					<div class="left">
+						<strong class="name">Lance Normine</strong>
+						<span class="role">Instructor &amp; Co-Founder of Commonwealth Skateboarding</span>
+						<p class="description">Lance is a longtime Portland skater with extensive knowledge of the local and national skateboard scenes as well as the current skateboard product market. Lance is also the primary instructor for Commonwealth’s widely popular skatecamp programs and provides private skateboarding instruction for people of all ages.</p>
+					</div>
+				</div>
+				
+				<div class="bio" id="jen">
+					<div class="right">
+						<div class="photo"> &nbsp; </div>
+					</div>
+					<div class="left">
+						<strong class="name">Jen Sherowski</strong>
+						<span class="role">Public Relations &amp; Co-Founder of Commonwealth Skateboarding</span>
+						<p class="description">Bio here.</p>
+					</div>
+				</div>
 
-			<h6>Address, Phone &amp; Email</h6>
-			<p>
-				1425 SE 20th Avenue, Portland OR, 97214 <br>
-				503-208-2080 <br>
-				<a href="mailto:info@lastplacefootwear.com">info@lastplacefootwear.com</a>
-		</p>
+				<div class="bio" id="mandy">
+					<div class="right">
+						<div class="photo"> &nbsp; </div>
+					</div>
+					<div class="left">
+						<strong class="name">Mandy McClausky</strong>
+						<span class="role">Digital Strategist, Designer</span>
+						<p class="description">Mandy is another regular face around the shop, helping run the retail space and maintaining our social presence. She has over a decade of experience in web design and front-end development and has been the primary designer for LastPlaceFootwear.com.</p>
+					</div>
+				</div>
 
-			<h6>Map</h6>
-			<p>The shop is accessible via Trimet route 14 and street parking is available on surrounding streets.</p>
-			<div id="map">&nbsp;</div>
+				<div class="bio" id="colin">
+					<div class="right">
+						<div class="photo"> &nbsp; </div>
+					</div>
+					<div class="left">
+						<strong class="name">Colin Delargy</strong>
+						<span class="role">Chief Financial Officer</span>
+						<p class="description">Colin is an engineer, entrepreneur, tinkerer and investor with extensive knowledge of online commerce and payments. Colin currently serves as our Chief Financial Officer and has extensive experience working with seed through IPO stage technology ventures and commercial, non-profit and government finance and accounting.</p>
+					</div>
+				</div>
 
-			<!-- <iframe width="100%" height="280" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=1425+SE+20th+Ave,+Portland,+OR&amp;aq=0&amp;oq=1425+SE+20th&amp;sll=44.145447,-120.583402&amp;sspn=5.068885,7.481689&amp;t=m&amp;ie=UTF8&amp;hq=&amp;hnear=1425+SE+20th+Ave,+Portland,+Oregon+97214&amp;ll=45.512482,-122.645702&amp;spn=0.05774,0.109863&amp;z=13&amp;iwloc=near&amp;output=embed"></iframe> -->
-
-			<h6>Hours</h6>
-			<p>Please note: these hours reflect when the shop is open, which coincides with special events at the skatepark. To ensure the skatepark is available during these hours, please check <a href="#">Commonwealth Skatepark's website.</a>
-			
-			<table width="100%" cellpadding="0" cellspacing="0" class="hours">
-				<tr>
-					<th>Monday</th>
-					<th>Tuesday</th>
-					<th>Wednesday</th>
-					<th>Thursday</th>
-					<th>Friday</th>
-					<th>Saturday</th>
-					<th>Sunday</th>
-				</tr>
-				<tr>
-					<td>2pm - 10pm</td>
-					<td>2pm - 8pm</td>
-					<td>2pm - 8pm</td>
-					<td>2pm - 8pm</td>
-					<td>2pm - 9pm</td>
-					<td>10am - 8pm</td>
-					<td>12pm - 7:30pm</td>
-				</tr>
-			</table>
-
-			<h6>
+				<div class="bio" id="nat">
+					<div class="right">
+						<div class="photo"> &nbsp; </div>
+					</div>
+					<div class="left">
+						<strong class="name">Nat Tarbox</strong>
+						<span class="role">Vice President</span>
+						<p class="description">Nat is a seasoned user experience design leader with a background in web media and software products. As an early stage hire at an SaaS startup which recently completed a successful IPO, he contributed to the design and growth of both product design and customer solutions teams. His areas of product design concentration include mobile apps, social interaction, commerce, and video.</p>
+					</div>
+				</div>
+				<div class="bio" id="branden">
+					<div class="right">
+						<div class="photo"> &nbsp; </div>
+					</div>
+					<div class="left">
+						<strong class="name">Branden Hall</strong>
+						<p class="description">Branden is the CEO and co-founder of Automata Studios, a software consultancy and development studio based out of Washington, DC. Over the last seven years Branden and his partners have grown Automata from a bootstrapped garage start-up to an organization with 8 full time employees, numer- ous contractors, and a client list that includes such companies as IBM, Chanel, NPR, Microsoft, and Adobe.</p>
+					</div>
+				</div>
+				<div class="bio" id="franco">
+					<div class="right">
+						<div class="photo"> &nbsp; </div>
+					</div>
+					<div class="left">
+						<strong class="name">Franco Brockelman</strong>
+						<p class="description">Franco bio</p>
+					</div>
+				</div>
+				<div class="bio" id="bryce">
+					<div class="right">
+						<div class="photo"> &nbsp; </div>
+					</div>
+					<div class="left">
+						<strong class="name">Bryce Holley</strong>
+						<p class="description">Bryce bio.</p>
+					</div>
+				</div>
+			</div>
 		</section>
 	</div>
 
@@ -252,53 +309,5 @@
 			<span>1240 | 946 | 795 | 674 | 400</span>
 		</div>
 	</div>
-
-	<script src="js/jquery.js"></script>
-	<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
-	<script src="js/browser-os_selectors.js"></script>
-	<script src="js/backstretch.js"></script>
-	<script src="js/waypoints.js"></script>
-	<script src="js/waypoints-sticky.js"></script>
-	<script src="js/gomap.js"></script>
-	<script src="js/imageLens.js"></script>
-	
-	<script>
-		// Waypoint Sticky
-		$('nav').waypoint('sticky');
-
-		// Backstretch.js
-		$.backstretch([
-			"img/bg_boardwall2.jpg",
-			"img/bg_shop.jpg"
-			], {
-				fade: 950,
-				duration: 4000
-		});
-
-    $("#map").goMap({ 
-        markers: [{
-        	latitude: 45.512482, 
-        	longitude: -122.645702
-        }],
-        icon: 'img/map_pin_medium.png',
-        maptype: 'ROADMAP',
-        zoom: 13
-    }); 
-
-		// Responsive debug
-		$(window).resize(function(e) {
-			 showViewportSize();
-		});
-		function showViewportSize() {
-			 var the_width = $(window).width();
-			 var the_height = $(window).height();                   
-			 $('#width').text(the_width);
-			 $('#height').text(the_height);
-		}
-
-				//google.maps.LatLng(-45.512482, -122.645702)
-
-			// $("#shop img").imageLens({ lensSize: 300,  borderSize: 8,  borderColor: "#0066AE" });
-	</script>
 </body>
 </html>

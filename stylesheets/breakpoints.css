@@ -30,86 +30,102 @@
     font-size: 42.5px !important;
     line-height: 59.5px !important;
   }
+  /* line 50, ../sass/breakpoints.sass */
+  section[id="team"] .right {
+    display: none !important;
+  }
+  /* line 52, ../sass/breakpoints.sass */
+  section[id="team"] .left {
+    width: 100% !important;
+  }
 }
 @media only screen and (max-width: 680px) {
-  /* line 55, ../sass/breakpoints.sass */
+  /* line 59, ../sass/breakpoints.sass */
   nav .wrapper {
     padding-right: 17px !important;
   }
-  /* line 58, ../sass/breakpoints.sass */
+  /* line 62, ../sass/breakpoints.sass */
   nav #logo {
     padding-left: 34px !important;
   }
 
-  /* line 61, ../sass/breakpoints.sass */
+  /* line 65, ../sass/breakpoints.sass */
   section {
     padding: 68px 34px !important;
   }
-  /* line 64, ../sass/breakpoints.sass */
+  /* line 68, ../sass/breakpoints.sass */
   section .cols {
     column-span: all !important;
     -webkit-column-span: all !important;
     columns: 1 !important;
     -webkit-columns: 1 !important;
   }
-  /* line 73, ../sass/breakpoints.sass */
+  /* line 77, ../sass/breakpoints.sass */
   section[id="home"] h1 {
     font-size: 34px !important;
     line-height: 51px !important;
   }
-  /* line 79, ../sass/breakpoints.sass */
-  section[id="shop"] header h2 {
-    font-size: 28px;
-  }
   /* line 82, ../sass/breakpoints.sass */
-  section[id="shop"] header h5 {
-    font-size: 13px;
-  }
-}
-@media only screen and (max-width: 500px) {
-  /* line 91, ../sass/breakpoints.sass */
-  section[id="home"] h1 {
-    font-size: 29.05983px !important;
-    line-height: 45.56px !important;
-  }
-  /* line 96, ../sass/breakpoints.sass */
   section[id="shop"] header {
     height: 34px !important;
     line-height: 17px;
   }
-  /* line 100, ../sass/breakpoints.sass */
+  /* line 86, ../sass/breakpoints.sass */
   section[id="shop"] header h2 {
     font-size: 24px !important;
   }
-  /* line 103, ../sass/breakpoints.sass */
+  /* line 89, ../sass/breakpoints.sass */
   section[id="shop"] header h5 {
+    font-size: 14px !important;
     margin-bottom: none !important;
   }
-  /* line 106, ../sass/breakpoints.sass */
+  /* line 93, ../sass/breakpoints.sass */
   section[id="shop"] header .currency {
     font-size: 17px !important;
     vertical-align: 17px !important;
   }
-  /* line 110, ../sass/breakpoints.sass */
+  /* line 97, ../sass/breakpoints.sass */
   section[id="shop"] header .amount {
     font-size: 45.56px !important;
   }
 }
+@media only screen and (max-width: 500px) {
+  /* line 106, ../sass/breakpoints.sass */
+  section[id="home"] h1 {
+    font-size: 29.05983px !important;
+    line-height: 45.56px !important;
+  }
+}
 @media only screen and (max-width: 460px) {
-  /* line 119, ../sass/breakpoints.sass */
+  /* line 115, ../sass/breakpoints.sass */
   section[id="home"] h1 {
     font-size: 25.37313px !important;
     line-height: 45.56px !important;
   }
+  /* line 120, ../sass/breakpoints.sass */
+  section[id="shop"] header {
+    height: 34px !important;
+    line-height: 17px;
+  }
+  /* line 124, ../sass/breakpoints.sass */
+  section[id="shop"] header h2 {
+    font-size: 17px !important;
+    font-weight: 500;
+  }
+  /* line 128, ../sass/breakpoints.sass */
+  section[id="shop"] header h5 {
+    font-size: 11px !important;
+    margin-bottom: none !important;
+  }
 }
 @media only screen and (max-width: 442px) {
-  /* line 131, ../sass/breakpoints.sass */
+  /* line 138, ../sass/breakpoints.sass */
   nav #logo {
     padding-left: 17px !important;
     width: 100px !important;
   }
 
-  /* line 137, ../sass/breakpoints.sass */
+  /* line 144, ../sass/breakpoints.sass */
   section[id="about"] .photo {
     float: none !important;
     height: 300px !important;

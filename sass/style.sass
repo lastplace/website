@@ -27,6 +27,12 @@ $brand-darkest: darken($brand, 21.5)
 	-webkit-columns: 1
 	width: 100%
 
+.row
+	clear: both
+	overflow: hidden
+	padding: 0 0 $grid 0
+	width: 100%
+
 // $base = $brand
 // $base = hsl(205, 100%, 34%)
 
@@ -48,6 +54,7 @@ html, body
 	padding: 0
 
 body
+	background: $brand-darkest
 	overflow-x: hidden
 	
 	///* Fun with OSs & Browsers *///
@@ -208,13 +215,15 @@ section
 						border-bottom: none
 
 .content
-	background: #FFF url("/img/portlandia_shreds_clipped.gif") -620px -800px
+	background: #FFF url("../img/portlandia_shreds_clipped.gif") -620px -800px
 	background-repeat: no-repeat
 	width: 100%
 
 	section
 		background: #FFF
 		border-bottom: 1px solid fade_out($brand, .95)
+		clear: both
+		overflow: hidden
 		padding: $grid*2 $grid*2 $grid $grid*2
 		max-width: 1072px
 
@@ -343,37 +352,41 @@ section
 				font-size: 11px
 				line-height: $grid/2
 
-			a.photo
-				display: block
-				overflow: hidden
+			.photo
+				float: left
 				position: relative
-				height: 100%
-				width: 100%
+
+				a
+					&:hover
+						background: none
+
+						.overlay
+							opacity: 1
 
 				.overlay
-					display: none
+					opacity: 0
+					background: fade_out($brand, .5)
+					color: #FFF
+					position: absolute
+					text-align: center
+
+					bottom: 11px // WHY
+					left: 0
+					right: 0
+					top: 0
+
+					span 
+						display: block
+						margin-top: 30%
 
 					i 
 						font-size: $grid*5
 						font-weight: normal
 
-				&:hover
-					background: none
-
-					.overlay
-						background: fade_out($brand, .5)
+					p 
 						color: #FFF
-						display: inline
-						height: auto
-						padding: 35% 0
-						position: absolute
-						text-align: center
-						width: 100%
-
-						p 
-							color: #FFF
-							font-size: $grid
-							font-weight: 600
+						font-size: $grid
+						font-weight: 600
 
 					
 		&[id="about"] 
@@ -386,116 +399,121 @@ section
 					line-height: $grid
 					margin: 0 0 $grid/1.34
 					
-			[id="team"]
-				padding-top: $grid*2
+		&[id="team"]
+			padding-top: $grid*2
 
-			.bio
-				@extend .colbreak
-				min-height: $grid*10
-				max-height: $grid*14
-				overflow: hidden
-				padding: $grid/2 0
+		.bio
+			@extend .colbreak
+			overflow: hidden
+			padding: $grid/2 0
 
-				&:not(:last-of-type)
-					border-bottom: 3px solid fade_out($brand, .95)
+			&:not(:last-of-type)
+				border-bottom: 3px solid fade_out($brand, .95)
 
-				.left, .right
-					width: 50%
+			.left, .right
+				width: 50%
 
-				.right
+			.right
 
-					.photo 
-						border-radius: 50%
-						margin-left: $grid
-						height: 300px
-						width: 300px
-						padding-top: $grid
+				.photo 
+					border-radius: 50%
+					margin-left: $grid
+					height: 300px
+					width: 300px
+					padding-top: $grid
 
-						img
-							height: 100%
-							width: 100%
+					img
+						height: 100%
+						width: 100%
 
-				.name, .role
-					color: $brand-darker
-					display: block
+			.name, .role
+				color: $brand-darker
+				display: block
 
-				.name 
-					font-weight: 800
-					line-height: $grid/1.34
+			.name 
+				font-weight: 800
+				line-height: $grid/1.34
 
-				.role 
-					color: $brand
-					font-size: $grid/3
-					font-weight: 600
-					line-height: $grid/2
-					margin-bottom: $grid/3
+			.role 
+				color: $brand
+				font-size: $grid/3
+				font-weight: 600
+				line-height: $grid/2
+				margin-bottom: $grid/3
 
-				.description
-					margin: $grid 0 $grid/2
+			.description
+				margin: $grid 0 $grid/2
 
-				.social 
-					margin-bottom: 0
+			.social 
+				margin-bottom: 0
 
-					i 
-						font-size: $grid*2
+				i 
+					font-size: $grid*2
 
-						a 
-							display: inline-block
-							font-weight: normal
-							margin-left: -$grid/2
-							padding: $grid/2 0
-							text-align: center
-							width: $grid*2
+					a 
+						display: inline-block
+						font-weight: normal
+						margin-left: -$grid/2
+						padding: $grid/2 0
+						text-align: center
+						width: $grid*2
 
-							&:hover
+						&:hover
 
-								&[title="Dribbble"]
-									background: #ea4c89
+							&[title="Dribbble"]
+								background: #ea4c89
 
-								&[title="Tumblr"]
-									background: #2c4762
+							&[title="Tumblr"]
+								background: #2c4762
 
-				&[id="matt"]
-					.photo
-						background: url("/img/bios/matt_bio.jpg") no-repeat center center
-						background-size: 160%
+			&[id="matt"]
+				.photo
+					background: url("../img/bios/matt_bio.jpg") no-repeat center center
+					background-size: 160%
 
-				&[id="lance"]
-					.photo
-						background: url("/img/bios/lance_bio.jpg") no-repeat center center
-						background-size: 100%
-				&[id="jen"]
-					.photo
-						background: url("/img/bios/jen_bio.jpg") no-repeat center center
-						background-size: 100%
-				&[id="mandy"]
-					.photo
-						background: url("/img/bios/mandy_bio.jpg") no-repeat center center
-						background-size: 100%
-				&[id="colin"]
-					.photo
-						background: url("/img/bios/colin_bio.jpg") no-repeat center center
-						background-size: 100%
-				&[id="nat"]
-					.photo
-						background: url("/img/bios/nat_bio.jpg") no-repeat center center
-						background-size: 100%
-				&[id="branden"]
-					.photo
-						background: url("/img/bios/branden_bio.jpg") no-repeat center center
-						background-size: 100%
-				&[id="franco"]
-					.photo
-						background: url("/img/bios/franco_bio.jpg") no-repeat center center
-						background-size: 100%
-				&[id="bryce"]
-					.photo
-						background: url("/img/bios/bryce_bio.jpg") no-repeat center center
-						background-size: 100%
+			&[id="lance"]
+				.photo
+					background: url("../img/bios/lance_bio.jpg") no-repeat center center
+					background-size: 100%
+			&[id="jen"]
+				.photo
+					background: url("../img/bios/jen_bio.jpg") no-repeat center center
+					background-size: 100%
+			&[id="mandy"]
+				.photo
+					background: url("../img/bios/mandy_bio.jpg") no-repeat center center
+					background-size: 100%
+			&[id="colin"]
+				.photo
+					background: url("../img/bios/colin_bio.jpg") no-repeat center center
+					background-size: 100%
+			&[id="nat"]
+				.photo
+					background: url("../img/bios/nat_bio.jpg") no-repeat center center
+					background-size: 100%
+			&[id="branden"]
+				.photo
+					background: url("../img/bios/branden_bio.jpg") no-repeat center center
+					background-size: 100%
+			&[id="franco"]
+				.photo
+					background: url("../img/bios/franco_bio.jpg") no-repeat center center
+					background-size: 100%
+			&[id="bryce"]
+				.photo
+					background: url("../img/bios/bryce_bio.jpg") no-repeat center center
+					background-size: 100%
 
 		&[id="contact"]
 
+			.left 
+				width: 30%
+
+			.right
+				width: 60%
+
 			[id="map"]
+				clear: both
 				height: 240px
 				width: 100%
 				margin: 0

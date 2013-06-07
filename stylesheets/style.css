@@ -178,86 +178,102 @@ i.social {
     font-size: 42.5px !important;
     line-height: 59.5px !important;
   }
+  /* line 50, ../sass/breakpoints.sass */
+  section[id="team"] .right {
+    display: none !important;
+  }
+  /* line 52, ../sass/breakpoints.sass */
+  section[id="team"] .left {
+    width: 100% !important;
+  }
 }
 @media only screen and (max-width: 680px) {
-  /* line 55, ../sass/breakpoints.sass */
+  /* line 59, ../sass/breakpoints.sass */
   nav .wrapper {
     padding-right: 17px !important;
   }
-  /* line 58, ../sass/breakpoints.sass */
+  /* line 62, ../sass/breakpoints.sass */
   nav #logo {
     padding-left: 34px !important;
   }
 
-  /* line 61, ../sass/breakpoints.sass */
+  /* line 65, ../sass/breakpoints.sass */
   section {
     padding: 68px 34px !important;
   }
-  /* line 64, ../sass/breakpoints.sass */
+  /* line 68, ../sass/breakpoints.sass */
   section .cols {
     column-span: all !important;
     -webkit-column-span: all !important;
     columns: 1 !important;
     -webkit-columns: 1 !important;
   }
-  /* line 73, ../sass/breakpoints.sass */
+  /* line 77, ../sass/breakpoints.sass */
   section[id="home"] h1 {
     font-size: 34px !important;
     line-height: 51px !important;
   }
-  /* line 79, ../sass/breakpoints.sass */
-  section[id="shop"] header h2 {
-    font-size: 28px;
-  }
   /* line 82, ../sass/breakpoints.sass */
-  section[id="shop"] header h5 {
-    font-size: 13px;
-  }
-}
-@media only screen and (max-width: 500px) {
-  /* line 91, ../sass/breakpoints.sass */
-  section[id="home"] h1 {
-    font-size: 29.05983px !important;
-    line-height: 45.56px !important;
-  }
-  /* line 96, ../sass/breakpoints.sass */
   section[id="shop"] header {
     height: 34px !important;
     line-height: 17px;
   }
-  /* line 100, ../sass/breakpoints.sass */
+  /* line 86, ../sass/breakpoints.sass */
   section[id="shop"] header h2 {
     font-size: 24px !important;
   }
-  /* line 103, ../sass/breakpoints.sass */
+  /* line 89, ../sass/breakpoints.sass */
   section[id="shop"] header h5 {
+    font-size: 14px !important;
     margin-bottom: none !important;
   }
-  /* line 106, ../sass/breakpoints.sass */
+  /* line 93, ../sass/breakpoints.sass */
   section[id="shop"] header .currency {
     font-size: 17px !important;
     vertical-align: 17px !important;
   }
-  /* line 110, ../sass/breakpoints.sass */
+  /* line 97, ../sass/breakpoints.sass */
   section[id="shop"] header .amount {
     font-size: 45.56px !important;
   }
 }
+@media only screen and (max-width: 500px) {
+  /* line 106, ../sass/breakpoints.sass */
+  section[id="home"] h1 {
+    font-size: 29.05983px !important;
+    line-height: 45.56px !important;
+  }
+}
 @media only screen and (max-width: 460px) {
-  /* line 119, ../sass/breakpoints.sass */
+  /* line 115, ../sass/breakpoints.sass */
   section[id="home"] h1 {
     font-size: 25.37313px !important;
     line-height: 45.56px !important;
   }
+  /* line 120, ../sass/breakpoints.sass */
+  section[id="shop"] header {
+    height: 34px !important;
+    line-height: 17px;
+  }
+  /* line 124, ../sass/breakpoints.sass */
+  section[id="shop"] header h2 {
+    font-size: 17px !important;
+    font-weight: 500;
+  }
+  /* line 128, ../sass/breakpoints.sass */
+  section[id="shop"] header h5 {
+    font-size: 11px !important;
+    margin-bottom: none !important;
+  }
 }
 @media only screen and (max-width: 442px) {
-  /* line 131, ../sass/breakpoints.sass */
+  /* line 138, ../sass/breakpoints.sass */
   nav #logo {
     padding-left: 17px !important;
     width: 100px !important;
   }
 
-  /* line 137, ../sass/breakpoints.sass */
+  /* line 144, ../sass/breakpoints.sass */
   section[id="about"] .photo {
     float: none !important;
     height: 300px !important;
@@ -281,7 +297,7 @@ i.social {
 }
 
 /* line 21, ../sass/style.sass */
-.colbreak, .content section h1, .content section h2, .content section h3, .content section h4, .content section h5, .content section[id="about"] p.breakout, .content section[id="about"] .bio {
+.colbreak, .content section h1, .content section h2, .content section h3, .content section h4, .content section h5, .content section[id="about"] p.breakout, .content section .bio {
   column-span: all;
   -moz-column-span: all;
   -webkit-column-span: all;
@@ -291,12 +307,20 @@ i.social {
   width: 100%;
 }
 
-/* line 39, ../sass/style.sass */
+/* line 30, ../sass/style.sass */
+.row {
+  clear: both;
+  overflow: hidden;
+  padding: 0 0 34px 0;
+  width: 100%;
+}
+
+/* line 45, ../sass/style.sass */
 html * {
   box-sizing: border-box;
 }
 
-/* line 42, ../sass/style.sass */
+/* line 48, ../sass/style.sass */
 html, body {
   height: 100%;
   font-family: "Helvetica Neue", "Helvetica", sans-serif;
@@ -306,48 +330,49 @@ html, body {
   padding: 0;
 }
 
-/* line 50, ../sass/style.sass */
+/* line 56, ../sass/style.sass */
 body {
+  background: #002640;
   overflow-x: hidden;
 }
-/* line 56, ../sass/style.sass */
+/* line 63, ../sass/style.sass */
 .win body {
   font-family: "Source Sans Pro";
 }
-/* line 64, ../sass/style.sass */
+/* line 71, ../sass/style.sass */
 .win body .content section h2 {
   font-weight: 400;
 }
-/* line 67, ../sass/style.sass */
+/* line 74, ../sass/style.sass */
 .win body .content section p {
   font-size: 14.52991px;
   line-height: 34px;
 }
-/* line 71, ../sass/style.sass */
+/* line 78, ../sass/style.sass */
 .win body .content section p.breakout {
   font-weight: 700;
 }
-/* line 77, ../sass/style.sass */
+/* line 84, ../sass/style.sass */
 .gecko body nav #logo {
   -moz-box-sizing: content-box;
 }
 
-/* line 81, ../sass/style.sass */
+/* line 88, ../sass/style.sass */
 h1, h2, h3, h4, h5, h6 {
   color: #002640;
 }
 
-/* line 84, ../sass/style.sass */
+/* line 91, ../sass/style.sass */
 p, ul {
   margin: 0;
 }
 
-/* line 87, ../sass/style.sass */
+/* line 94, ../sass/style.sass */
 a {
   text-decoration: none;
 }
 
-/* line 98, ../sass/style.sass */
+/* line 105, ../sass/style.sass */
 .sticky-wrapper {
   height: 45.56px;
   position: absolute;
@@ -356,41 +381,41 @@ a {
   z-index: 10;
 }
 
-/* line 106, ../sass/style.sass */
+/* line 113, ../sass/style.sass */
 nav {
   height: 45.56px;
   margin-bottom: 34px;
   width: 100%;
 }
-/* line 111, ../sass/style.sass */
+/* line 118, ../sass/style.sass */
 nav.stuck {
   background: #002640;
   height: 45.56px;
   position: fixed;
   top: 0;
 }
-/* line 119, ../sass/style.sass */
+/* line 126, ../sass/style.sass */
 nav.stuck ul li a {
   color: rgba(123, 200, 255, 0.75);
 }
-/* line 122, ../sass/style.sass */
+/* line 129, ../sass/style.sass */
 nav.stuck ul li a:hover {
   background: none;
   color: white;
 }
-/* line 126, ../sass/style.sass */
+/* line 133, ../sass/style.sass */
 nav .wrapper {
   max-width: 1072px;
   overflow: hidden;
   padding-right: 68px;
 }
-/* line 131, ../sass/style.sass */
+/* line 138, ../sass/style.sass */
 nav #logo {
   box-sizing: content-box;
   padding: 6.8px 0 0 68px;
   width: 126px;
 }
-/* line 137, ../sass/style.sass */
+/* line 144, ../sass/style.sass */
 nav ul {
   float: right;
   list-style: none;
@@ -398,12 +423,12 @@ nav ul {
   -webkit-margin-after: 0;
   -webkit-padding-start: 0;
 }
-/* line 144, ../sass/style.sass */
+/* line 151, ../sass/style.sass */
 nav ul li {
   float: left;
   margin-top: 6px;
 }
-/* line 149, ../sass/style.sass */
+/* line 156, ../sass/style.sass */
 nav ul li a {
   color: white;
   font-size: 17px;
@@ -413,29 +438,29 @@ nav ul li a {
   padding: 6.8px 8.5px;
   text-transform: lowercase;
 }
-/* line 158, ../sass/style.sass */
+/* line 165, ../sass/style.sass */
 nav ul li a span {
   color: rgba(123, 200, 255, 0.8);
   font-size: 42px;
 }
-/* line 162, ../sass/style.sass */
+/* line 169, ../sass/style.sass */
 nav ul li a.active, nav ul li a:active {
   color: white;
 }
-/* line 165, ../sass/style.sass */
+/* line 172, ../sass/style.sass */
 nav ul li a:hover {
   background: #0066ae;
 }
-/* line 169, ../sass/style.sass */
+/* line 176, ../sass/style.sass */
 nav svg {
   position: absolute;
 }
 
-/* line 172, ../sass/style.sass */
+/* line 179, ../sass/style.sass */
 section {
   width: 100%;
 }
-/* line 175, ../sass/style.sass */
+/* line 182, ../sass/style.sass */
 section[id="home"] {
   display: -webkit-box;
   display: -moz-box;
@@ -450,11 +475,11 @@ section[id="home"] {
   height: 100%;
   padding: 68px 34px 68px 68px;
 }
-/* line 183, ../sass/style.sass */
+/* line 190, ../sass/style.sass */
 section[id="home"] .headline {
   width: 1072px;
 }
-/* line 186, ../sass/style.sass */
+/* line 193, ../sass/style.sass */
 section[id="home"] .headline h1 {
   color: white;
   display: block;
@@ -463,144 +488,146 @@ section[id="home"] .headline h1 {
   font-weight: 200;
   text-shadow: 0 0 50px #002640;
 }
-/* line 198, ../sass/style.sass */
+/* line 205, ../sass/style.sass */
 section[id="home"] .headline h1 a {
   color: white;
   font-weight: 500;
   margin: 0 -8px;
   padding: 0 8px;
 }
-/* line 205, ../sass/style.sass */
+/* line 212, ../sass/style.sass */
 section[id="home"] .headline h1 a:hover {
   background: #0066ae;
   border-bottom: none;
 }
 
-/* line 210, ../sass/style.sass */
+/* line 217, ../sass/style.sass */
 .content {
-  background: white url("/img/portlandia_shreds_clipped.gif") -620px -800px;
+  background: white url("../img/portlandia_shreds_clipped.gif") -620px -800px;
   background-repeat: no-repeat;
   width: 100%;
 }
-/* line 215, ../sass/style.sass */
+/* line 222, ../sass/style.sass */
 .content section {
   background: white;
   border-bottom: 1px solid rgba(0, 102, 174, 0.05);
+  clear: both;
+  overflow: hidden;
   padding: 68px 68px 34px 68px;
   max-width: 1072px;
 }
-/* line 221, ../sass/style.sass */
+/* line 230, ../sass/style.sass */
 .content section .cols {
   columns: 2;
   -webkit-columns: 2;
   column-gap: 68px;
   -webkit-column-gap: 68px;
 }
-/* line 232, ../sass/style.sass */
+/* line 241, ../sass/style.sass */
 .content section > * {
   max-width: 970px;
 }
-/* line 238, ../sass/style.sass */
+/* line 247, ../sass/style.sass */
 .content section h2 {
   font-size: 34px;
   font-weight: 200;
 }
-/* line 242, ../sass/style.sass */
+/* line 251, ../sass/style.sass */
 .content section h5 {
   font-size: 17px;
   font-weight: 600;
   line-height: 22px;
   margin-bottom: 25.37313px;
 }
-/* line 248, ../sass/style.sass */
+/* line 257, ../sass/style.sass */
 .content section h6 {
   color: #004677;
   font-size: 14.52991px;
   font-weight: 800;
 }
-/* line 253, ../sass/style.sass */
+/* line 262, ../sass/style.sass */
 .content section h6:not(:first-of-type) {
   margin-top: 68px;
 }
-/* line 256, ../sass/style.sass */
+/* line 265, ../sass/style.sass */
 .content section p {
   color: #444444;
   font-size: 14.52991px;
   line-height: 27.2px;
   margin: 0 0 14.52991px 0;
 }
-/* line 262, ../sass/style.sass */
+/* line 271, ../sass/style.sass */
 .content section p a {
   margin: 0 -2px;
   padding: 0 2px;
 }
-/* line 266, ../sass/style.sass */
+/* line 275, ../sass/style.sass */
 .content section p strong {
   font-weight: 800;
 }
-/* line 269, ../sass/style.sass */
+/* line 278, ../sass/style.sass */
 .content section a {
   color: #0066ae;
   font-weight: 700;
 }
-/* line 273, ../sass/style.sass */
+/* line 282, ../sass/style.sass */
 .content section a:hover {
   background: #0066ae;
   color: white;
 }
-/* line 277, ../sass/style.sass */
+/* line 286, ../sass/style.sass */
 .content section[id="shop"] {
   background: none;
   padding-top: 68px;
   width: 100%;
 }
-/* line 282, ../sass/style.sass */
+/* line 291, ../sass/style.sass */
 .content section[id="shop"] header {
   color: #002640;
   height: 68px;
   margin-bottom: 20px;
 }
-/* line 287, ../sass/style.sass */
+/* line 296, ../sass/style.sass */
 .content section[id="shop"] header a {
   display: inline-block;
   margin: -4px -8px;
   padding: 4px 8px;
 }
-/* line 292, ../sass/style.sass */
+/* line 301, ../sass/style.sass */
 .content section[id="shop"] header .left {
   float: left;
   width: 76%;
 }
-/* line 296, ../sass/style.sass */
+/* line 305, ../sass/style.sass */
 .content section[id="shop"] header .left h2 {
   color: #0066ae;
 }
-/* line 299, ../sass/style.sass */
+/* line 308, ../sass/style.sass */
 .content section[id="shop"] header .left h2:hover {
   color: white;
 }
-/* line 301, ../sass/style.sass */
+/* line 310, ../sass/style.sass */
 .content section[id="shop"] header .left h5 {
   color: #002640;
   border-bottom: none;
   margin-bottom: none;
 }
-/* line 306, ../sass/style.sass */
+/* line 315, ../sass/style.sass */
 .content section[id="shop"] header .right {
   float: right;
   width: 22%;
 }
-/* line 310, ../sass/style.sass */
+/* line 319, ../sass/style.sass */
 .content section[id="shop"] header .right .price {
   display: block;
   text-align: right;
   width: 100%;
 }
-/* line 315, ../sass/style.sass */
+/* line 324, ../sass/style.sass */
 .content section[id="shop"] header .right .price > * {
   position: relative;
 }
-/* line 330, ../sass/style.sass */
+/* line 339, ../sass/style.sass */
 .content section[id="shop"] header .right .price .currency {
   font-size: 34px;
   font-weight: 600;
@@ -608,56 +635,59 @@ section[id="home"] .headline h1 a:hover {
   vertical-align: 26px;
   z-index: 2;
 }
-/* line 337, ../sass/style.sass */
+/* line 346, ../sass/style.sass */
 .content section[id="shop"] header .right .price .amount {
   font-size: 74px;
   font-weight: 900;
   z-index: 2;
 }
-/* line 342, ../sass/style.sass */
+/* line 351, ../sass/style.sass */
 .content section[id="shop"] .details {
   font-size: 11px;
   line-height: 17px;
 }
-/* line 346, ../sass/style.sass */
-.content section[id="shop"] a.photo {
-  display: block;
-  overflow: hidden;
+/* line 355, ../sass/style.sass */
+.content section[id="shop"] .photo {
+  float: left;
   position: relative;
-  height: 100%;
-  width: 100%;
-}
-/* line 353, ../sass/style.sass */
-.content section[id="shop"] a.photo .overlay {
-  display: none;
-}
-/* line 356, ../sass/style.sass */
-.content section[id="shop"] a.photo .overlay i {
-  font-size: 170px;
-  font-weight: normal;
 }
 /* line 360, ../sass/style.sass */
-.content section[id="shop"] a.photo:hover {
+.content section[id="shop"] .photo a:hover {
   background: none;
 }
 /* line 363, ../sass/style.sass */
-.content section[id="shop"] a.photo:hover .overlay {
+.content section[id="shop"] .photo a:hover .overlay {
+  opacity: 1;
+}
+/* line 366, ../sass/style.sass */
+.content section[id="shop"] .photo .overlay {
+  opacity: 0;
   background: rgba(0, 102, 174, 0.5);
   color: white;
-  display: inline;
-  height: auto;
-  padding: 35% 0;
   position: absolute;
   text-align: center;
-  width: 100%;
+  bottom: 11px;
+  left: 0;
+  right: 0;
+  top: 0;
 }
-/* line 373, ../sass/style.sass */
-.content section[id="shop"] a.photo:hover .overlay p {
+/* line 378, ../sass/style.sass */
+.content section[id="shop"] .photo .overlay span {
+  display: block;
+  margin-top: 30%;
+}
+/* line 382, ../sass/style.sass */
+.content section[id="shop"] .photo .overlay i {
+  font-size: 170px;
+  font-weight: normal;
+}
+/* line 386, ../sass/style.sass */
+.content section[id="shop"] .photo .overlay p {
   color: white;
   font-size: 34px;
   font-weight: 600;
 }
-/* line 381, ../sass/style.sass */
+/* line 394, ../sass/style.sass */
 .content section[id="about"] p.breakout {
   color: #004576;
   font-size: 25.37313px;
@@ -665,70 +695,68 @@ section[id="home"] .headline h1 a:hover {
   line-height: 34px;
   margin: 0 0 25.37313px;
 }
-/* line 389, ../sass/style.sass */
-.content section[id="about"] [id="team"] {
+/* line 402, ../sass/style.sass */
+.content section[id="team"] {
   padding-top: 68px;
 }
-/* line 392, ../sass/style.sass */
-.content section[id="about"] .bio {
-  min-height: 340px;
-  max-height: 476px;
+/* line 405, ../sass/style.sass */
+.content section .bio {
   overflow: hidden;
   padding: 17px 0;
 }
-/* line 399, ../sass/style.sass */
-.content section[id="about"] .bio:not(:last-of-type) {
+/* line 410, ../sass/style.sass */
+.content section .bio:not(:last-of-type) {
   border-bottom: 3px solid rgba(0, 102, 174, 0.05);
 }
-/* line 402, ../sass/style.sass */
-.content section[id="about"] .bio .left, .content section[id="about"] .bio .right {
+/* line 413, ../sass/style.sass */
+.content section .bio .left, .content section .bio .right {
   width: 50%;
 }
-/* line 407, ../sass/style.sass */
-.content section[id="about"] .bio .right .photo {
+/* line 418, ../sass/style.sass */
+.content section .bio .right .photo {
   border-radius: 50%;
   margin-left: 34px;
   height: 300px;
   width: 300px;
   padding-top: 34px;
 }
-/* line 414, ../sass/style.sass */
-.content section[id="about"] .bio .right .photo img {
+/* line 425, ../sass/style.sass */
+.content section .bio .right .photo img {
   height: 100%;
   width: 100%;
 }
-/* line 418, ../sass/style.sass */
-.content section[id="about"] .bio .name, .content section[id="about"] .bio .role {
+/* line 429, ../sass/style.sass */
+.content section .bio .name, .content section .bio .role {
   color: #004677;
   display: block;
 }
-/* line 422, ../sass/style.sass */
-.content section[id="about"] .bio .name {
+/* line 433, ../sass/style.sass */
+.content section .bio .name {
   font-weight: 800;
   line-height: 25.37313px;
 }
-/* line 426, ../sass/style.sass */
-.content section[id="about"] .bio .role {
+/* line 437, ../sass/style.sass */
+.content section .bio .role {
   color: #0066ae;
   font-size: 11.33333px;
   font-weight: 600;
   line-height: 17px;
   margin-bottom: 11.33333px;
 }
-/* line 433, ../sass/style.sass */
-.content section[id="about"] .bio .description {
+/* line 444, ../sass/style.sass */
+.content section .bio .description {
   margin: 34px 0 17px;
 }
-/* line 436, ../sass/style.sass */
-.content section[id="about"] .bio .social {
+/* line 447, ../sass/style.sass */
+.content section .bio .social {
   margin-bottom: 0;
 }
-/* line 439, ../sass/style.sass */
-.content section[id="about"] .bio .social i {
+/* line 450, ../sass/style.sass */
+.content section .bio .social i {
   font-size: 68px;
 }
-/* line 442, ../sass/style.sass */
-.content section[id="about"] .bio .social i a {
+/* line 453, ../sass/style.sass */
+.content section .bio .social i a {
   display: inline-block;
   font-weight: normal;
   margin-left: -17px;
@@ -736,67 +764,76 @@ section[id="home"] .headline h1 a:hover {
   text-align: center;
   width: 68px;
 }
-/* line 452, ../sass/style.sass */
-.content section[id="about"] .bio .social i a:hover[title="Dribbble"] {
+/* line 463, ../sass/style.sass */
+.content section .bio .social i a:hover[title="Dribbble"] {
   background: #ea4c89;
 }
-/* line 455, ../sass/style.sass */
-.content section[id="about"] .bio .social i a:hover[title="Tumblr"] {
+/* line 466, ../sass/style.sass */
+.content section .bio .social i a:hover[title="Tumblr"] {
   background: #2c4762;
 }
-/* line 459, ../sass/style.sass */
-.content section[id="about"] .bio[id="matt"] .photo {
-  background: url("/img/bios/matt_bio.jpg") no-repeat center center;
+/* line 470, ../sass/style.sass */
+.content section .bio[id="matt"] .photo {
+  background: url("../img/bios/matt_bio.jpg") no-repeat center center;
   background-size: 160%;
 }
-/* line 464, ../sass/style.sass */
-.content section[id="about"] .bio[id="lance"] .photo {
-  background: url("/img/bios/lance_bio.jpg") no-repeat center center;
+/* line 475, ../sass/style.sass */
+.content section .bio[id="lance"] .photo {
+  background: url("../img/bios/lance_bio.jpg") no-repeat center center;
   background-size: 100%;
 }
-/* line 468, ../sass/style.sass */
-.content section[id="about"] .bio[id="jen"] .photo {
-  background: url("/img/bios/jen_bio.jpg") no-repeat center center;
+/* line 479, ../sass/style.sass */
+.content section .bio[id="jen"] .photo {
+  background: url("../img/bios/jen_bio.jpg") no-repeat center center;
   background-size: 100%;
 }
-/* line 472, ../sass/style.sass */
-.content section[id="about"] .bio[id="mandy"] .photo {
-  background: url("/img/bios/mandy_bio.jpg") no-repeat center center;
+/* line 483, ../sass/style.sass */
+.content section .bio[id="mandy"] .photo {
+  background: url("../img/bios/mandy_bio.jpg") no-repeat center center;
   background-size: 100%;
 }
-/* line 476, ../sass/style.sass */
-.content section[id="about"] .bio[id="colin"] .photo {
-  background: url("/img/bios/colin_bio.jpg") no-repeat center center;
+/* line 487, ../sass/style.sass */
+.content section .bio[id="colin"] .photo {
+  background: url("../img/bios/colin_bio.jpg") no-repeat center center;
   background-size: 100%;
 }
-/* line 480, ../sass/style.sass */
-.content section[id="about"] .bio[id="nat"] .photo {
-  background: url("/img/bios/nat_bio.jpg") no-repeat center center;
+/* line 491, ../sass/style.sass */
+.content section .bio[id="nat"] .photo {
+  background: url("../img/bios/nat_bio.jpg") no-repeat center center;
   background-size: 100%;
 }
-/* line 484, ../sass/style.sass */
-.content section[id="about"] .bio[id="branden"] .photo {
-  background: url("/img/bios/branden_bio.jpg") no-repeat center center;
+/* line 495, ../sass/style.sass */
+.content section .bio[id="branden"] .photo {
+  background: url("../img/bios/branden_bio.jpg") no-repeat center center;
   background-size: 100%;
 }
-/* line 488, ../sass/style.sass */
-.content section[id="about"] .bio[id="franco"] .photo {
-  background: url("/img/bios/franco_bio.jpg") no-repeat center center;
+/* line 499, ../sass/style.sass */
+.content section .bio[id="franco"] .photo {
+  background: url("../img/bios/franco_bio.jpg") no-repeat center center;
   background-size: 100%;
 }
-/* line 492, ../sass/style.sass */
-.content section[id="about"] .bio[id="bryce"] .photo {
-  background: url("/img/bios/bryce_bio.jpg") no-repeat center center;
+/* line 503, ../sass/style.sass */
+.content section .bio[id="bryce"] .photo {
+  background: url("../img/bios/bryce_bio.jpg") no-repeat center center;
   background-size: 100%;
 }
-/* line 498, ../sass/style.sass */
+/* line 509, ../sass/style.sass */
+.content section[id="contact"] .left {
+  width: 30%;
+}
+/* line 512, ../sass/style.sass */
+.content section[id="contact"] .right {
+  width: 60%;
+}
+/* line 515, ../sass/style.sass */
 .content section[id="contact"] [id="map"] {
+  clear: both;
   height: 240px;
   width: 100%;
   margin: 0;
   padding: 0;
 }
-/* line 504, ../sass/style.sass */
+/* line 522, ../sass/style.sass */
 .content section[id="contact"] .hours {
   background: rgba(0, 102, 174, 0.1);
   border-radius: 4px;
@@ -804,15 +841,15 @@ section[id="home"] .headline h1 a:hover {
   padding: 10px;
   text-align: center;
 }
-/* line 511, ../sass/style.sass */
+/* line 529, ../sass/style.sass */
 .content section[id="contact"] .hours tr {
   line-height: 24px;
 }
-/* line 514, ../sass/style.sass */
+/* line 532, ../sass/style.sass */
 .content section[id="contact"] .hours th {
   font-weight: 800;
 }
-/* line 517, ../sass/style.sass */
+/* line 535, ../sass/style.sass */
 .content section[id="contact"] .hours td {
   font-size: 17px;
 }

@@ -26,8 +26,8 @@
 
 			// Backstretch.js
 			$.backstretch([
-				"../img/bg_boardwall2.jpg",
-				"../img/bg_shop.jpg"
+				"img/bg_boardwall2.jpg",
+				"img/bg_shop.jpg"
 				], {
 					fade: 950,
 					duration: 4000
@@ -53,18 +53,18 @@
 		});
 
 		// Responsive debug
-		$(window).resize(function(e) {
+		// $(window).resize(function(e) {
 
-			 showViewportSize();
+		// 	 showViewportSize();
 
-			 function showViewportSize() {
-				 var the_width = $(window).width();
-				 var the_height = $(window).height();                   
-				 $('#width').text(the_width);
-				 $('#height').text(the_height);
-			}
+		// 	 function showViewportSize() {
+		// 		 var the_width = $(window).width();
+		// 		 var the_height = $(window).height();                   
+		// 		 $('#width').text(the_width);
+		// 		 $('#height').text(the_height);
+		// 	}
 
-		});
+		// });
 	</script>
 
 </head>
@@ -137,7 +137,7 @@
 							<p>Add to Cart</p>
 						</span>
 					</div>
-					<img src="img/products/pdx_shreds_001-cropped.jpg" width="100%" height="100%">
+					<img src="img/products/pdx_shreds_001-cropped.jpg" width="100%">
 				</a>
 			</div>
 		</section>
@@ -298,7 +298,7 @@
 		</section>
 	</div>
 
-	<div class="breakpoint"> 
+	<!-- <div class="breakpoint"> 
 		<div class="width">
 			<strong>width:</strong> <span id="width"></span> 
 		</div>
@@ -308,6 +308,6 @@
 		<div class="breakpoints">
 			<span>1240 | 946 | 795 | 674 | 400</span>
 		</div>
-	</div>
+	</div> -->
 </body>
 </html>

@@ -35,8 +35,9 @@ $brand-darkest: darken($brand, 21.5)
 
 .col 
 	float: left
+
 	&.fifty
-		width: 50%
+		width: 49%
 
 html *
 	box-sizing: border-box
@@ -401,7 +402,7 @@ section
 						padding: 17px 0
 
 					i 
-						color: lighten($brand, 45)
+						color: #FFF
 						font-size: $grid*2
 						font-weight: normal
 						line-height: 0
@@ -437,8 +438,10 @@ section
 			&:not(:last-of-type)
 				border-bottom: 3px solid fade_out($brand, .95)
 
-			.left, .right
-				width: 50%
+			.left
+				width: 65%
+			.right
+				width: 30%
 
 			.right
 
@@ -446,8 +449,10 @@ section
 					border-radius: 50%
 					margin-left: $grid
 					height: 250px
+					float: right
 					width: 250px
 					padding-top: $grid
+					text-align: right
 
 					img
 						height: 100%
@@ -533,27 +538,22 @@ section
 
 		&[id="contact"]
 
-			.left 
-				width: 30%
-
-			.right
-				width: 60%
-
 			p 
 				font-size: $grid/2
 
 			[id="map"]
 				clear: both
-				height: 240px
+				height: 400px
 				width: 100%
 				margin: 0
 				padding: 0
 
 			.hours
-				background: fade_out($brand, .9)
-				border-radius: 4px
+				background: fade_out($brand, .96)
+				border-radius: 3px
 				color: $brand-darker
-				padding: 10px
+				margin-top: 6px
+				padding: 9px
 				text-align: center
 
 				tr 

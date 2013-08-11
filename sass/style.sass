@@ -1,5 +1,5 @@
 @import "compass"
-//@import "partials/animate"
+@import "partials/animate"
 @import "partials/defaults"
 //@import "partials/flipInX"
 @import "partials/fonts"
@@ -39,6 +39,10 @@ $brand-darkest: darken($brand, 21.5)
 	&.fifty
 		width: 49%
 
+
+html
+	background: $brand-darkest
+
 html *
 	box-sizing: border-box
 
@@ -51,7 +55,11 @@ html, body
 	padding: 0
 
 body
-	background: $brand-darkest
+	@include animated($name: fadeIn, $duration: 3s, $delay: 0s, $function: ease-in-out, $mode: both)
+	background: $brand-darkest url(../img/bg_shop3.jpg) no-repeat center center fixed
+	-webkit-background-size: cover
+	-moz-background-size: cover
+	background-size: cover
 	color: #444
 	overflow-x: hidden
 	
@@ -131,6 +139,7 @@ a
 nav
 	height: $grid*1.34
 	margin-bottom: $grid
+	padding: 0 $grid*2
 	width: 100%
 
 	&.stuck
@@ -149,14 +158,12 @@ nav
 						color: fade_out(lighten($brand, 40), .25)
 
 	.wrapper
-		max-width: 1072px
+		max-width: 970px
 		overflow: hidden
-		padding-right: $grid*2
 
 	#logo
 		box-sizing: content-box
-		//margin: 0
-		padding: $grid/5 0 0 $grid*2
+		margin-top: 6px
 		width: 126px
 
 	ul
@@ -165,6 +172,7 @@ nav
 		-webkit-margin-before: 0
 		-webkit-margin-after: 0
 		-webkit-padding-start: 0
+
 
 		li 
 			//box-shadow: inset 0 1px 0 1px $brand
@@ -176,8 +184,8 @@ nav
 				font-size: $grid/2
 				font-weight: 700
 				line-height: $grid
-				margin: 0 $grid/4
-				padding: $grid/5 $grid/4
+				margin: 0 2px
+				padding: $grid/5 $grid/3
 				text-transform: lowercase
 
 				span
@@ -198,15 +206,14 @@ section
 	width: 100%
 	
 	&[id="home"]
-		@include display-box
 		@include box-align(center)
-		background: fade_out($brand-darkest, .25)
+		@include display-box
 		color: #FFF
 		height: 100%
 		padding: $grid*2 $grid $grid*2 $grid*2
 
 		.headline 
-			width: 1072px
+			max-width: 1072px
 
 			h1 
 				color: #FFF
@@ -214,11 +221,6 @@ section
 				font-size: $grid*2
 				line-height: $grid*2.5
 				font-weight: 200
-				text-shadow: 0 0 50px $brand-darkest
-
-				strong
-					//background: #002742
-					//font-weight: 500
 
 				a
 					@extend .nofade
@@ -233,8 +235,7 @@ section
 						border-bottom: none
 
 .content
-	background: #FFF url("../img/portlandia_shreds_clipped.gif") -620px -800px
-	background-repeat: no-repeat
+	height: 100%
 	width: 100%
 
 	section
@@ -243,7 +244,8 @@ section
 		clear: both
 		overflow: hidden
 		padding: $grid*2 $grid*2 $grid $grid*2
-		max-width: 1072px
+		//max-width: 1072px
+		width: 100%
 
 		.cols
 			columns: 2
@@ -303,7 +305,8 @@ section
 				color: #FFF
 
 		&[id="shop"]
-			background: none
+			background: url("../img/portlandia_shreds_clipped.gif") -620px -800px
+			background-repeat: no-repeat
 			padding-top: $grid*2
 			width: 100%
 
@@ -430,111 +433,111 @@ section
 		&[id="team"]
 			padding-top: $grid*2
 
-		.bio
-			@extend .colbreak
-			overflow: hidden
-			padding: $grid/2 0
+			.bio
+				@extend .colbreak
+				overflow: hidden
+				padding: $grid/2 0
 
-			&:not(:last-of-type)
-				border-bottom: 3px solid fade_out($brand, .95)
+				&:not(:last-of-type)
+					border-bottom: 3px solid fade_out($brand, .95)
 
-			.left
-				width: 65%
-			.right
-				width: 30%
+				.left
+					width: 65%
+				.right
+					width: 30%
 
-			.right
+				.right
 
-				.photo 
-					border-radius: 50%
-					margin-left: $grid
-					height: 250px
-					float: right
-					width: 250px
-					padding-top: $grid
-					text-align: right
+					.photo 
+						border-radius: 50%
+						margin-left: $grid
+						height: 250px
+						float: right
+						width: 250px
+						padding-top: $grid
+						text-align: right
 
-					img
-						height: 100%
-						width: 100%
+						img
+							height: 100%
+							width: 100%
 
-			.name, .role
-				color: $brand-darker
-				display: block
+				.name, .role
+					color: $brand-darker
+					display: block
 
-			.name 
-				font-weight: 800
-				line-height: $grid/1.34
+				.name 
+					font-weight: 800
+					line-height: $grid/1.34
 
-			.role 
-				color: $brand
-				font-size: $grid/3
-				font-weight: 600
-				line-height: $grid/2
-				margin-bottom: $grid/3
+				.role 
+					color: $brand
+					font-size: $grid/3
+					font-weight: 600
+					line-height: $grid/2
+					margin-bottom: $grid/3
 
-			.description
-				margin: $grid 0 $grid/2
+				.description
+					margin: $grid 0 $grid/2
 
-			.social 
-				margin-bottom: 0
+				.social 
+					margin-bottom: 0
 
-				i 
-					font-size: $grid*2
+					i 
+						font-size: $grid*2
 
-					a 
-						display: inline-block
-						font-weight: normal
-						margin-left: -$grid/2
-						padding: $grid/2 0
-						text-align: center
-						width: $grid*2
+						a 
+							display: inline-block
+							font-weight: normal
+							margin-left: -$grid/2
+							padding: $grid/2 0
+							text-align: center
+							width: $grid*2
 
-						&:hover
+							&:hover
 
-							&[title="Dribbble"]
-								background: #ea4c89
+								&[title="Dribbble"]
+									background: #ea4c89
 
-							&[title="Tumblr"]
-								background: #2c4762
+								&[title="Tumblr"]
+									background: #2c4762
 
-			&[id="matt"]
-				.photo
-					background: url("../img/bios/matt_bio.jpg") no-repeat center center
-					background-size: 160%
+				&[id="matt"]
+					.photo
+						background: url("../img/bios/matt_bio.jpg") no-repeat center center
+						background-size: 160%
 
-			&[id="lance"]
-				.photo
-					background: url("../img/bios/lance_bio.jpg") no-repeat center center
-					background-size: 100%
-			&[id="jen"]
-				.photo
-					background: url("../img/bios/jen_bio.jpg") no-repeat center center
-					background-size: 100%
-			&[id="mandy"]
-				.photo
-					background: url("../img/bios/mandy_bio.jpg") no-repeat center center
-					background-size: 100%
-			&[id="colin"]
-				.photo
-					background: url("../img/bios/colin_bio.jpg") no-repeat center center
-					background-size: 100%
-			&[id="nat"]
-				.photo
-					background: url("../img/bios/nat_bio.jpg") no-repeat center center
-					background-size: 100%
-			&[id="branden"]
-				.photo
-					background: url("../img/bios/branden_bio.jpg") no-repeat center center
-					background-size: 100%
-			&[id="franco"]
-				.photo
-					background: url("../img/bios/franco_bio.jpg") no-repeat center center
-					background-size: 100%
-			&[id="bryce"]
-				.photo
-					background: url("../img/bios/bryce_bio.jpg") no-repeat center center
-					background-size: 100%
+				&[id="lance"]
+					.photo
+						background: url("../img/bios/lance_bio.jpg") no-repeat center center
+						background-size: 100%
+				&[id="jen"]
+					.photo
+						background: url("../img/bios/jen_bio.jpg") no-repeat center center
+						background-size: 100%
+				&[id="mandy"]
+					.photo
+						background: url("../img/bios/mandy_bio.jpg") no-repeat center center
+						background-size: 100%
+				&[id="colin"]
+					.photo
+						background: url("../img/bios/colin_bio.jpg") no-repeat center center
+						background-size: 100%
+				&[id="nat"]
+					.photo
+						background: url("../img/bios/nat_bio.jpg") no-repeat center center
+						background-size: 100%
+				&[id="branden"]
+					.photo
+						background: url("../img/bios/branden_bio.jpg") no-repeat center center
+						background-size: 100%
+				&[id="franco"]
+					.photo
+						background: url("../img/bios/franco_bio.jpg") no-repeat center center
+						background-size: 100%
+				&[id="bryce"]
+					.photo
+						background: url("../img/bios/bryce_bio.jpg") no-repeat center center
+						background-size: 100%
 
 		&[id="contact"]
 

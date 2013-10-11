@@ -4224,7 +4224,7 @@ section[id="home"] .headline h1 a:hover {
 /* line 505, ../sass/style.sass */
 .content section[id="team"] .bio[id="matt"] .photo {
   background: url("../img/bios/matt_bio.jpg") no-repeat center center;
-  background-size: 160%;
+  background-size: 100%;
 }
 /* line 510, ../sass/style.sass */
 .content section[id="team"] .bio[id="lance"] .photo {

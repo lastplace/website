@@ -21,6 +21,7 @@
 	<script src="js/maximage.js"></script> -->
 	<script src="js/waypoints.js"></script>
 	<script src="js/waypoints-sticky.js"></script>
+	<script src="js/jquery.unveil.min.js"></script>
 	
 	<script>
 
@@ -31,6 +32,11 @@
 		-->
 
 		$(function() {
+			
+			$(document).ready(function() {
+			  $("img").unveil();
+			});
+			
 				// waypoints-sticky.js
 				$('nav').waypoint('sticky');
 
@@ -192,7 +198,7 @@
 									<p>View Product</p>
 								</span>
 							</div>
-							<img src="img/products/pdx_shreds_003-cropped.jpg" width="100%">
+							<img src="img/loader.gif" data-src="img/products/pdx_shreds_003-cropped.jpg" width="100%">
 						</a>
 					</div>
 				</section>

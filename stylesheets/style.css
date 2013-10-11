@@ -4028,10 +4028,21 @@ section[id="home"] .headline h1 a:hover {
   margin: -4px -8px;
   padding: 4px 8px;
 }
+.content section[id="shop"] header .middle {
+  float: right;
+}
+.content section[id="shop"] header .middle .checkouts {
+  display: block;
+  text-align: right;
+  width: 100%;
+}
+.content section[id="shop"] header .middle .checkouts a {
+  padding: 18px;
+}
 /* line 323, ../sass/style.sass */
 .content section[id="shop"] header .left {
   float: left;
-  width: 76%;
+  width: 50%;
 }
 /* line 327, ../sass/style.sass */
 .content section[id="shop"] header .left h2 {
@@ -4050,7 +4061,7 @@ section[id="home"] .headline h1 a:hover {
 /* line 337, ../sass/style.sass */
 .content section[id="shop"] header .right {
   float: right;
-  width: 22%;
+  padding-left: 10px;
 }
 /* line 341, ../sass/style.sass */
 .content section[id="shop"] header .right .price {

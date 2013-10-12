@@ -4011,7 +4011,7 @@ section[id="home"] .headline h1 a:hover {
 }
 /* line 307, ../sass/style.sass */
 .content section[id="shop"] {
-  background: url("../img/portlandia_shreds_clipped_sm.gif");
+  background: white url("../img/portlandia_shreds_clipped_sm.gif");
   background-repeat: no-repeat;
   padding-top: 68px;
   width: 100%;
